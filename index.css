@@ -5,14 +5,19 @@ body {
 }
 
 .marquee {
-	background-color: whitesmoke; /* 背景色 */
+	/* background-color: whitesmoke; 背景色 */
 	width: 100%;
 	/* margin: 0 auto; */
 	/* overflow: hidden; */
 	margin: 0 calc(50% - 50vw);
    width: 100vw;
 }
-	
+
+div {
+color: black;
+padding: auto;
+}
+
 .marquee {
 display: inline-block;
 white-space: nowrap;
@@ -26,4 +31,4 @@ animation-iteration-count: infinite; /* 繰り返す回数 */
 	@keyframes MarqueeScroll {
 	from { transform: translateX(0%);}
 	to { transform: translateX(-100%);}
-} */
+}
