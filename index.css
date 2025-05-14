@@ -1,34 +1,18 @@
 @charset "UTF-8";
 
+/* 基本的なリセットとボディスタイル */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 背景画像の設定のみ */
 body {
-	background-color: lightblue;
-}
-
-.marquee {
-	/* background-color: whitesmoke; 背景色 */
-	width: 100%;
-	/* margin: 0 auto; */
-	/* overflow: hidden; */
-	margin: 0 calc(50% - 50vw);
-   width: 100vw;
-}
-
-div {
-color: black;
-padding: auto;
-}
-
-.marquee {
-display: inline-block;
-white-space: nowrap;
-padding-left: 100%;
-animation-name: MarqueeScroll;
-animation-timing-function: linear;
-animation-duration: 7s; /* 1周するのにかかる時間 */
-animation-iteration-count: infinite; /* 繰り返す回数 */
-}
-	
-	@keyframes MarqueeScroll {
-	from { transform: translateX(0%);}
-	to { transform: translateX(-100%);}
+    background-image: url('./eternalplayground_background.webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    min-height: 100vh;
 }
