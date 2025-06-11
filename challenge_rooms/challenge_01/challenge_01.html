@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>灰色背景のウェブサイト</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <button onclick="openFixedWindow()">新しいウィンドウで開く</button>
+        </header>
+        <main>
+            <div class="image-container">
+                <!-- ポルターガイスト画像を追加 -->
+                <img src="ポルターガイスト.jpg" alt="ポルターガイスト" class="poltergeist-image">
+            </div>
+        </main>
+        <!-- メッセージウィンドウを画面下部に追加 -->
+        <div class="message-window-container">
+            <img src="二度目のメッセージウィンドウ.png" alt="メッセージウィンドウ" class="message-window">
+            <!-- タイピングテキストをメッセージウィンドウ内に移動 -->
+            <div class="typing-text">
+                <span id="typing-content"></span>
+            </div>
+        </div>
+    </div>
+    
+    <!-- 分割されたJavaScriptファイルを読み込み -->
+    <script src="typing.js"></script>
+    <script src="window-control.js"></script>
+    <script src="popup-window.js"></script>
+</body>
+</html>

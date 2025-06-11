@@ -1,0 +1,153 @@
+/* 全体のリセットとベーススタイル */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'MS P明朝', 'MS PMincho', 'Times New Roman', serif; /* 昔のウェブフォントに変更 */
+    background-image: url('草原CG.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: white;
+    line-height: 1.6;
+    width: 1024px;
+    height: 768px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.container {
+    width: 1024px; /* 固定幅 */
+    max-width: 1200px; /* 最大幅の上限 */
+    margin: 0 auto;
+    padding: 20px;
+    height: 768px; /* 固定高さ */
+}
+
+header {
+    padding: 20px 0;
+    text-align: center;
+}
+
+main {
+    padding: 40px 0;
+}
+
+/* この部分を削除
+section {
+    margin-bottom: 30px;
+}
+*/
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+p {
+    margin-bottom: 15px;
+}
+
+/* 画像コンテナを相対位置に設定 */
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 60px;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+/* 画像のスタイル - 5倍に拡大 */
+.center-image {
+    width: 500%; /* 幅を5倍に */
+    height: 500%; /* 高さを5倍に */
+    max-width: none; /* max-widthの制限を解除 */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    object-fit: contain; /* アスペクト比を維持 */
+    position: relative;
+    z-index: 1;
+}
+
+/* メッセージウィンドウの画像内に表示されるタイピングテキスト */
+.typing-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'MSゴシック', 'MS Gothic', 'Courier New', monospace; /* タイピング部分はレトロなシステムフォント */
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #000000;
+    z-index: 10;
+    white-space: nowrap;
+    min-height: 2rem;
+    text-align: center;
+    padding: 10px;
+    border-radius: 5px;
+    text-shadow: 
+        0 0 3px rgba(0, 0, 0, 0.8),
+        0 0 6px rgba(0, 0, 0, 0.6),
+        0 0 9px rgba(0, 0, 0, 0.4),
+        0 0 12px rgba(0, 0, 0, 0.2);
+    filter: blur(0.5px);
+}
+
+#typing-content::after {
+    content: '|';
+    animation: blink 1s infinite;
+    color: #000000;
+    /* カーソルにもぼかし効果を適用 */
+    text-shadow: 
+        0 0 3px rgba(0, 0, 0, 0.8),
+        0 0 6px rgba(0, 0, 0, 0.6);
+}
+
+@keyframes blink {
+    0%, 50% {
+        opacity: 1;
+    }
+    51%, 100% {
+        opacity: 0;
+    }
+}
+
+/* ポルターガイスト画像のスタイル */
+.poltergeist-image {
+    position: fixed; /* absoluteからfixedに変更 */
+    top: 65%; /* 画面全体の70%の位置 */
+    left: 80%;
+    transform: translate(-50%, -50%);
+    width: 350px;
+    height: auto;
+    z-index: 2;
+    opacity: 0.9;
+}
+
+/* メッセージウィンドウコンテナのスタイル */
+.message-window-container {
+    position: fixed;
+    bottom: 70px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 900px;
+    height: auto;
+    z-index: 5;
+}
+
+/* メッセージウィンドウのスタイル */
+.message-window {
+    width: 100%;
+    height: auto;
+    opacity: 1;
+}
