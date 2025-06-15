@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Challenge Lobby - Eternal Playground</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 2rem;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            color: white;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        .subtitle {
+            font-size: 1.2rem;
+            margin-bottom: 3rem;
+            opacity: 0.9;
+        }
+        .challenge-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+        .challenge-card {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 2rem;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-decoration: none;
+            color: white;
+            display: block;
+        }
+        .challenge-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+            text-decoration: none;
+            color: white;
+        }
+        .challenge-number {
+            font-size: 3rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+            opacity: 0.8;
+        }
+        .challenge-title {
+            font-size: 1.3rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+        .challenge-description {
+            font-size: 0.9rem;
+            opacity: 0.8;
+            line-height: 1.4;
+        }
+        .navigation {
+            margin-top: 3rem;
+        }
+        .nav-link {
+            display: inline-block;
+            margin: 0 1rem;
+            padding: 0.8rem 1.5rem;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 25px;
+            text-decoration: none;
+            color: white;
+            transition: background 0.3s ease;
+        }
+        .nav-link:hover {
+            background: rgba(255, 255, 255, 0.3);
+            text-decoration: none;
+            color: white;
+        }
+        .status {
+            font-size: 0.8rem;
+            margin-top: 0.5rem;
+            padding: 0.3rem 0.8rem;
+            border-radius: 15px;
+            background: rgba(255, 255, 255, 0.2);
+        }
+        .available {
+            background: rgba(76, 175, 80, 0.3);
+        }
+        .coming-soon {
+            background: rgba(255, 193, 7, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎮 Challenge Lobby</h1>
+        <p class="subtitle">Choose your challenge and test your skills!</p>
+        
+        <div class="challenge-grid">
+            <a href="challenge_01/challenge_01.html" class="challenge-card">
+                <div class="challenge-number">01</div>
+                <div class="challenge-title">First Challenge</div>
+                <div class="challenge-description">
+                    Begin your journey with the first challenge. Test your basic skills and get familiar with the playground.
+                </div>
+                <div class="status available">Available</div>
+            </a>
+            
+            <a href="challenge_02/challenge_02.html" class="challenge-card">
+                <div class="challenge-number">02</div>
+                <div class="challenge-title">Second Challenge</div>
+                <div class="challenge-description">
+                    Take on the second challenge. Things get more interesting as you dive deeper into the mysteries.
+                </div>
+                <div class="status coming-soon">Coming Soon</div>
+            </a>
+            
+            <a href="challenge_03/challenge_03.html" class="challenge-card">
+                <div class="challenge-number">03</div>
+                <div class="challenge-title">Third Challenge</div>
+                <div class="challenge-description">
+                    The ultimate test awaits. Are you ready to face the final challenge of the playground?
+                </div>
+                <div class="status coming-soon">Coming Soon</div>
+            </a>
+        </div>
+        
+        <div class="navigation">
+            <a href="tutorial.html" class="nav-link">← Back to Tutorial</a>
+            <a href="../game_hub.html" class="nav-link">← Game Hub</a>
+        </div>
+    </div>
+</body>
+</html>

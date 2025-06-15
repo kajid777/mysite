@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Challenge 03 - Eternal Playground</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 2rem;
+            background: linear-gradient(135deg, #8e44ad 0%, #3742fa 100%);
+            min-height: 100vh;
+            color: white;
+            text-align: center;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 2rem;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        .challenge-number {
+            font-size: 4rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+            opacity: 0.8;
+        }
+        .description {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+        .status {
+            font-size: 1.5rem;
+            padding: 1rem 2rem;
+            background: rgba(255, 193, 7, 0.3);
+            border-radius: 25px;
+            margin-bottom: 2rem;
+            border: 2px solid rgba(255, 193, 7, 0.5);
+        }
+        .navigation {
+            margin-top: 2rem;
+        }
+        .nav-link {
+            display: inline-block;
+            margin: 0 1rem;
+            padding: 0.8rem 1.5rem;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 25px;
+            text-decoration: none;
+            color: white;
+            transition: background 0.3s ease;
+        }
+        .nav-link:hover {
+            background: rgba(255, 255, 255, 0.3);
+            text-decoration: none;
+            color: white;
+        }
+        .ultimate {
+            background: linear-gradient(45deg, #ff6b6b, #feca57, #48dbfb, #ff9ff3);
+            background-size: 400% 400%;
+            animation: gradient 3s ease infinite;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        @keyframes gradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="challenge-number ultimate">03</div>
+        <h1>Ultimate Challenge</h1>
+        <div class="description">
+            The ultimate test of the Eternal Playground.<br>
+            This challenge will push your limits and test everything you've learned.<br>
+            <strong>Are you ready for the final confrontation?</strong>
+        </div>
+        <div class="status">
+            🔒 Coming Soon 🔒
+        </div>
+        <div class="navigation">
+            <a href="../lobby.html" class="nav-link">← Back to Lobby</a>
+            <a href="../challenge_02/challenge_02.html" class="nav-link">Challenge 02</a>
+        </div>
+    </div>
+</body>
+</html>
